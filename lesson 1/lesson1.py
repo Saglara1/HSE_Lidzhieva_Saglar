@@ -1,3 +1,4 @@
+# Задание 1
 c = 10
 d = "привет"
 
@@ -13,3 +14,14 @@ print(id(e))
 print(id(f))
 print(id(j))
 
+# Задание 2
+sec = input('Введите число секунд: ')
+
+if sec.isdigit():
+    mins = int(sec)/60
+    hours = mins/60
+    print('Часы:', hours)
+    print('Минуты:', mins)
+    print('Секунды:', int(sec))
+else:
+    print('Надо было вводить число!')
