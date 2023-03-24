@@ -1,4 +1,4 @@
-# # #
+
 # Задание 1
 
 c = 10
@@ -16,21 +16,7 @@ print(id(e))
 print(id(f))
 print(id(j))
 
-# Задание 2 - вариант 1
-
-sec = input('Введите число секунд: ')
-
-if sec.isdigit():
-    mins = int(sec)//60
-    hours = mins//60
-    print('Часы:', hours)
-    print('Минуты:', mins)
-    print('Секунды:', int(sec))
-else:
-    print('Надо было вводить число!')
-# # #
-
-# Задание 2 - вариант 2
+# Задание 2
 
 sec1 = input('Введите число секунд: ')
 
@@ -44,7 +30,7 @@ if sec1.isdigit():
     print('Секунды:', sec3)
 else:
     print('Надо было вводить число!')
-# # #
+
 # Задание 3
 n = int(input("Введите число от 1 до 9: "))
 nn = n*10+n
