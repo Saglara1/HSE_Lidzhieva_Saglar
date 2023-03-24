@@ -36,7 +36,7 @@ sec1 = input('Введите число секунд: ')
 
 if sec1.isdigit():
     hours = int(sec1)//3600
-    sec2 = int(sec1) - 600*int(hours)
+    sec2 = int(sec1) - 3600*int(hours)
     mins = int(sec2)//60
     sec3 = int(sec1) - int(hours*3600) - int(mins*60)
     print('Часы:', hours)
