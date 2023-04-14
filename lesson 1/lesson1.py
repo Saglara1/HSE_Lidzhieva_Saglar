@@ -37,3 +37,4 @@ nn = n*10+n
 nnn = n*100 + nn
 sum = n+nn+nnn
 print(sum)
+
