@@ -23,7 +23,7 @@ def make_traders_table(txt_intput_file_path, json_input_file_path, csv_output_fi
                 traders_data[trader["inn"]] = {"ogrn": trader["ogrn"], "address": trader["address"]}
 
     with open(csv_output_file_path, "w", newline="", encoding='utf-8') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, delimiter=";")
         for item in inn:
             if item in traders_data:
                 writer.writerow([item, traders_data[item]["ogrn"], traders_data[item]["address"]])
