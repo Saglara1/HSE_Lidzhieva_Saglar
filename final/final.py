@@ -85,7 +85,7 @@ class ChangeRateCB:
 
     # Возвращает курс обмена на последнюю доступную дату
     def cnangerate_last(self):
-        return self.data[0]
+        return self.data[-1]
 
     # Возвращает отсортированный список кортеж пар (дата, курс обмена) за определённый период
     def cnangerate_range_dates(self, from_date, to_date):
