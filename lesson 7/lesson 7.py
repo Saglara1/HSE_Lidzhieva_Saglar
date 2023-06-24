@@ -1,3 +1,7 @@
+""""
+https://www.cbr.ru/currency_base/dynamics/?UniDbQuery.Posted=True&UniDbQuery.so=1&UniDbQuery.VAL_NM_RQ=R01375&UniDbQuery.From=17.09.2013&UniDbQuery.To=09.06.2023
+"""
+
 from datetime import date
 import json
 import requests
