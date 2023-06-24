@@ -1,5 +1,5 @@
 """
-https://www.cbr.ru/currency_base/dynamics/?UniDbQuery.Posted=True&UniDbQuery.so=1&UniDbQuery.VAL_NM_RQ=R01239&UniDbQuery.From=17.09.2013&UniDbQuery.To=14.06.2023
+https://www.cbr.ru/currency_base/dynamics/?UniDbQuery.Posted=True&UniDbQuery.so=1&UniDbQuery.VAL_NM_RQ=R01239&UniDbQuery.From=17.09.2013&UniDbQuery.To=17.06.2023
 """
 
 import os
@@ -8,11 +8,6 @@ from datetime import datetime, date
 import json
 import requests
 from bs4 import BeautifulSoup
-
-url_params = "?" \
-             "UniDbQuery.Posted=True&" \
-             "UniDbQuery.From=17.09.2013&" \
-             "UniDbQuery.To=15.05.2023"
 
 currency_ids = {
     "EUR": "R01239",
@@ -23,8 +18,7 @@ currency_ids = {
 
 
 class ParserCBRF:
-    def __init__(self, currency_ids, url_params):
-        self.url_params = url_params
+    def __init__(self, currency_ids):
         self.currency_ids = currency_ids
         self.save_path = "parsed_data/"
 
@@ -104,6 +98,6 @@ class ChangeRateCB:
         return result
 
 
-parser = ParserCBRF(currency_ids, url_params)
+parser = ParserCBRF(currency_ids)
 data = parser.start(currency_name='EUR')
 сhange_rate_object = ChangeRateCB("parsed_data/data.json")
